@@ -1,0 +1,71 @@
+.about{
+    color: white;
+    text-align: center;
+}
+
+.section{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    width: 80%;
+    margin: 1rem auto 0 auto;
+}
+.section a{
+    padding: 10px 28px;
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    color: white;
+    position: relative;
+    left: 15px;
+}
+
+.section a:hover{
+    background-color: white;
+    color:black;
+}
+.section img{
+    height: 300px;
+    width: 300px;
+}
+
+.section h3{
+    margin: 0;
+}
+
+.section h2{
+    font-size: 1.8rem;
+}
+
+@media(max-width: 590px){
+ .section h2{
+    font-size: 1.7rem;
+ }
+}
+
+@media(max-width: 767px){
+.section p{
+    width: 600px;
+   font-size: 0.8rem; 
+}
+}
+
+@media(min-width: 768px) and (max-width: 991px){
+.section p{
+        width: 600px;
+        font-size: 0.8rem;
+    }
+}
+
+@media(min-width:1159px) and (max-width:1200px){
+ .section p{
+    width: 600px;
+    font-size: 0.9rem;
+ }
+}
+
+body{
+    background-image: url(btbackground.jpg);
+    background-size: cover;
+}
