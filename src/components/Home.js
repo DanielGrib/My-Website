@@ -14,7 +14,7 @@ const Home = () => {
     </div>
     <div className='link'>
     <a href="https://www.linkedin.com/in/daniel-gribanov-0a08b41b5/" target="_blank" rel="noopener noreferrer" onClick={handleClick}>Linkedin</a>
-    <a href="Daniel_Gribanov_-_Resume.pdf"download="">Resume</a>
+    <a href="Daniel_Gribanov_-_Resume.pdf"download="Daniel_Gribanov_-_Resume.pdf">Resume</a>
     <a href="https://github.com/DanielGrib" target="_blank" rel="noopener noreferrer" onClick={handleClick}>Github</a>
     </div>
     </div>
