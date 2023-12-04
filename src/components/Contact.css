@@ -30,11 +30,19 @@ input[type="submit"]{
     color: white;
     position: relative;
     top: 7px;
+    transition: all 0.2s ease;
+    right:1px;
+}
+
+input[type="submit"]:hover{
+    transition: all 0.2s ease;
+    left: 1px;
 }
 
 input:hover{
     background-color: white;
     color:black;
+    transition: all 0.2s ease;
 }
 
 h3{
@@ -57,4 +65,5 @@ textarea{
 textarea:hover{
     background-color: white;
     color:black;
+    transition: all 0.8s ease;
 }
