@@ -17,7 +17,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const formSubmitUrl = 'https://formsubmit.co/ajax/fa45666464e398eb9e1f6baac1dd67bf';
+      const formSubmitUrl = 'https://formsubmit.co/fa45666464e398eb9e1f6baac1dd67bf';
       const formData = new FormData(form.current);
       const response = await fetch(formSubmitUrl, {
         method: 'POST',
@@ -29,12 +29,13 @@ const Contact = () => {
         alert('Message sent successfully');
         e.target.reset();
       } else {
-        console.error('Error sending message:', response.statusText);
-        alert('Error in sending message');
+        console.error('Error sending message: something else other then a catch error occured', response.statusText);
+        alert('Error in sending message, Something went wrong, Make sure to follow the format');
       }
     } catch (error) {
-      console.error('Error sending message:', error.message);
-      alert('Error in sending message');
+      console.error('Error sending message: Service is possibly down or the user needs to try again', error.message);
+      alert('Error in sending message, Please try again');
+      e.target.reset();
     }
   };
 
