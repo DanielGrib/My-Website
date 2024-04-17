@@ -6,6 +6,10 @@ const Contact = () => {
   const [text, setText]=useState('');
   const textareaRef=useRef(null);
 
+  const handleClick = () =>{
+    console.log("Link clicked, new tab opened");
+  }
+
   const handleInput = () => {
     const textarea = textareaRef.current;
     textarea.style.height = 'auto'; // Reset the height to auto to recalculate the textarea height
@@ -17,7 +21,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const formSubmitUrl = 'https://formsubmit.co/fa45666464e398eb9e1f6baac1dd67bf';
+      const formSubmitUrl = 'https://formsubmit.co/danielgribanovwork@gmail.com';
       const formData = new FormData(form.current);
       const response = await fetch(formSubmitUrl, {
         method: 'POST',
@@ -41,7 +45,8 @@ const Contact = () => {
 
   return (
     <div className='contact'>
-      <h3>Put a message below to send a message directly into my inbox</h3>
+      <div className='left-content'>
+      <h3>To send a message directly into my inbox</h3>
       <form ref={form} onSubmit={sendEmail}>
         <label>Your Name</label>
         <input type="text" name="user_name" />
@@ -51,6 +56,13 @@ const Contact = () => {
         <textarea ref={textareaRef} value={text} onInput={handleInput} name="message" />
         <input type="submit" value="Send" />
       </form>
+      </div>
+      <div className='right-content'>
+      <h3>To Schedule a meeting</h3>
+      <div className='availibility'>
+      <a href="https://cal.com/danielgribanov" target="_blank" rel="noopener noreferrer" onClick={handleClick}>View Availibility</a>
+      </div>
+      </div>
     </div>
   );
 };

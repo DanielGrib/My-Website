@@ -12,7 +12,7 @@ const Home = () => {
     <div>
     <div className='home'>
     <h2>Hi, My name is Daniel Gribanov</h2>
-    <h3>Junior Developer</h3>
+    <h3>Software Developer</h3>
     <h3>Recent Graduate from Algonquin College</h3>
     </div>
     <div className='link'>
