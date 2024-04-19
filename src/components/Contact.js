@@ -21,7 +21,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const formSubmitUrl = 'https://formsubmit.co/danielgribanovwork@gmail.com';
+      const formSubmitUrl = 'https://formsubmit.co/fa45666464e398eb9e1f6baac1dd67bf';
       const formData = new FormData(form.current);
       const response = await fetch(formSubmitUrl, {
         method: 'POST',
