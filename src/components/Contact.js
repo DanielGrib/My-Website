@@ -21,11 +21,14 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const formSubmitUrl = 'https://formsubmit.co/fa45666464e398eb9e1f6baac1dd67bf';
+      const formSubmitUrl = 'https://formspree.io/f/your-endpoint-id';
       const formData = new FormData(form.current);
       const response = await fetch(formSubmitUrl, {
         method: 'POST',
         body: formData,
+        headers:{
+          'Accept': 'application/json',
+        },
       });
 
       if (response.ok) {
